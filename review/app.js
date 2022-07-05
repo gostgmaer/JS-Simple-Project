@@ -136,12 +136,18 @@ prev.addEventListener('click', function () {
 
     if (currentItem != 0) {
         currentItem--;
+
         showPerson(currentItem)
     }
 
 })
 next.addEventListener('click', function () {
-    currentItem++;
+    if (currentItem > review.length - 1) {
+        currentItem = 0;
+    } else {
+        currentItem ++;
+    }
+
     showPerson(currentItem)
 })
 
@@ -165,4 +171,4 @@ function showPerson(person) {
     auther.textContent = item.name;
     job.textContent = item.designation;
     info.textContent = item.info;
-  }
+}
