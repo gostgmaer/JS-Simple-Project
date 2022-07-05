@@ -1,0 +1,6 @@
+body{
+    background-color: aliceblue;
+}
+
+
+@import "../colorfliper/bootstrap/dist/css/bootstrap.min.css";
